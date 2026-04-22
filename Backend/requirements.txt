@@ -32,6 +32,7 @@ redis[asyncio]>=5.0.0
 # ── Memory — PostgreSQL + SQLAlchemy ─────────────────────────
 sqlalchemy[asyncio]>=2.0.30
 asyncpg>=0.29.0
+aiosqlite>=0.20.0
 
 # ── Configuration ─────────────────────────────────────────────
 pydantic>=2.7.0

@@ -12,7 +12,7 @@ import type {
   TraceStep,
 } from '../types';
 
-const BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+const BASE = import.meta.env.VITE_API_BASE_URL || 'https://ai-voice-agent-8ea2.onrender.com';
 
 async function req<T>(path: string, options?: RequestInit): Promise<T> {
   const res = await fetch(`${BASE}${path}`, {
