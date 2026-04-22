@@ -16,7 +16,7 @@ import urllib.parse
 import urllib.request
 import urllib.error
 
-BASE = "http://localhost:8000"
+BASE = os.getenv("BASE_URL", "http://localhost:8000")
 
 PASS_LABEL = "[PASS]"
 FAIL_LABEL = "[FAIL]"

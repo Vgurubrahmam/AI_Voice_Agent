@@ -8,7 +8,9 @@ interface Props {
   onToast: (msg: string, type?: 'success' | 'error' | 'info') => void;
 }
 
-const WS_BASE = 'ws://localhost:8000';
+// Get WebSocket URL from environment variable or derive from API base URL
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'https://ai-voice-agent-8ea2.onrender.com';
+const WS_BASE = API_BASE.replace(/^https?/, 'ws');
 
 const LANG_FLAGS: Record<string, string> = { en: '🇬🇧', hi: '🇮🇳', ta: '🇮🇳' };
 const LANG_NAMES: Record<string, string> = { en: 'English', hi: 'Hindi', ta: 'Tamil' };
