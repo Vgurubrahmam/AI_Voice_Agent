@@ -1,0 +1,11 @@
+# Pyrefly configuration
+# Tells Pyrefly to use the virtualenv interpreter instead of system Python
+# so that project modules like `scheduling.slot_manager` resolve correctly.
+
+[python]
+# Point Pyrefly at the venv Python executable
+interpreter = "venv/Scripts/python.exe"
+
+[project]
+includes = ["."]
+excludes = ["venv", "**/__pycache__"]

@@ -1,0 +1,58 @@
+[
+  {
+    "phone": "+919876543210",
+    "name": "Arjun Mehta",
+    "preferred_language": "hi",
+    "notes": "Prefers morning slots. History of hypertension.",
+    "booking_history": [
+      {
+        "doctor_id": "D001",
+        "doctor_name": "Dr. Priya Sharma",
+        "date": "2026-04-10",
+        "time": "09:00",
+        "specialty": "General Medicine",
+        "status": "completed"
+      }
+    ]
+  },
+  {
+    "phone": "+919876543211",
+    "name": "Kavitha Sundaram",
+    "preferred_language": "ta",
+    "notes": "Requires pediatric consultation for child.",
+    "booking_history": [
+      {
+        "doctor_id": "D003",
+        "doctor_name": "Dr. Meena Iyer",
+        "date": "2026-04-15",
+        "time": "10:00",
+        "specialty": "Pediatrics",
+        "status": "completed"
+      },
+      {
+        "doctor_id": "D003",
+        "doctor_name": "Dr. Meena Iyer",
+        "date": "2026-04-18",
+        "time": "14:00",
+        "specialty": "Pediatrics",
+        "status": "completed"
+      }
+    ]
+  },
+  {
+    "phone": "+919876543212",
+    "name": "Rahul Verma",
+    "preferred_language": "en",
+    "notes": "Cardiac follow-up patient.",
+    "booking_history": [
+      {
+        "doctor_id": "D002",
+        "doctor_name": "Dr. Rajan Kumar",
+        "date": "2026-04-12",
+        "time": "13:00",
+        "specialty": "Cardiology",
+        "status": "completed"
+      }
+    ]
+  }
+]

@@ -1,0 +1,51 @@
+# ============================================================
+# Voice AI Agent — Python Dependencies
+# ============================================================
+
+# ── Core Web Framework ───────────────────────────────────────
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+python-multipart>=0.0.9
+websockets>=12.0
+
+# ── LLM — NVIDIA NIM via OpenAI SDK ─────────────────────────
+openai>=1.30.0
+
+# ── STT — Deepgram ───────────────────────────────────────────
+deepgram-sdk>=3.4.0
+httpx>=0.27.0
+
+# ── TTS — Google Cloud + Fallback ────────────────────────────
+google-cloud-texttospeech>=2.16.0
+gtts>=2.5.0
+
+# ── Voice Pipeline ─────────────────────────────────────────
+# pipecat-ai[deepgram,openai,google,silero,twilio]
+# NOTE: pipecat-ai is required for full VAD/streaming integration.
+# Install separately: pip install "pipecat-ai[deepgram,openai,google,silero,twilio]"
+# Uncomment when pipecat-ai is available in your environment:
+# pipecat-ai[deepgram,openai,google,silero,twilio]>=0.0.40
+
+# ── Memory — Redis ────────────────────────────────────────────
+redis[asyncio]>=5.0.0
+
+# ── Memory — PostgreSQL + SQLAlchemy ─────────────────────────
+sqlalchemy[asyncio]>=2.0.30
+asyncpg>=0.29.0
+
+# ── Configuration ─────────────────────────────────────────────
+pydantic>=2.7.0
+pydantic-settings>=2.2.0
+python-dotenv>=1.0.1
+
+# ── Telephony ─────────────────────────────────────────────────
+twilio>=9.0.0
+
+# ── Language Detection ────────────────────────────────────────
+langdetect>=1.0.9
+
+# ── Numeric / Stats ───────────────────────────────────────────
+numpy>=1.26.0
+
+# ── Utilities ─────────────────────────────────────────────────
+python-dateutil>=2.9.0

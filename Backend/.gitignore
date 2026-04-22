@@ -1,0 +1,56 @@
+# ── Secrets ─────────────────────────────────────────────
+.env
+*.env.local
+*.env.production
+
+# ── Python ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+wheels/
+*.pyc
+.pip-cache/
+
+# ── Virtual environments ─────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+
+# ── Database ─────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Logs ─────────────────────────────────────────────────
+*.log
+reasoning_trace.jsonl
+latency_log.jsonl
+
+# ── IDE ──────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Credentials ──────────────────────────────────────────
+*.json
+!data/doctors.json
+!data/patients_seed.json
+
+# ── Test artifacts ────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
