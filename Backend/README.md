@@ -119,6 +119,66 @@ Open `http://localhost:8000/docs` for the interactive API documentation.
 
 ---
 
+## Deployment
+
+### Production URLs
+
+- **Backend:** https://ai-voice-agent-8ea2.onrender.com
+- **Frontend:** https://ai-voice-agent-puce.vercel.app/
+- **API Docs:** https://ai-voice-agent-8ea2.onrender.com/docs
+
+### Render Deployment (Backend)
+
+**Root Directory:** `Backend/`
+
+**Build Command:**
+```
+pip install -r requirements.txt
+```
+
+**Start Command:**
+```
+uvicorn main:app --host 0.0.0.0 --port 8000
+```
+
+**Python Version:** Add `runtime.txt` in Backend/:
+```
+python-3.11.8
+```
+
+**Environment Variables** (in Render Dashboard → Settings → Environment):
+```
+NVIDIA_API_KEY=your_nvidia_api_key
+DEEPGRAM_API_KEY=your_deepgram_api_key
+GOOGLE_CREDENTIALS_JSON=your_google_creds_path
+TWILIO_ACCOUNT_SID=your_twilio_sid
+TWILIO_AUTH_TOKEN=your_twilio_token
+TWILIO_PHONE_NUMBER=your_twilio_number
+DATABASE_URL=your_postgres_url
+REDIS_URL=redis://default:password@your-redis-host:port
+BASE_URL=https://ai-voice-agent-8ea2.onrender.com
+ENVIRONMENT=production
+LOG_LEVEL=INFO
+```
+
+### Vercel Deployment (Frontend)
+
+**Root Directory:** `Frontend/`
+
+**Build Command:** (auto-detected)
+```
+npm run build
+```
+
+**Environment Variables** (in Vercel Dashboard → Settings → Environment Variables):
+```
+VITE_API_BASE_URL=https://ai-voice-agent-8ea2.onrender.com
+```
+
+The frontend automatically connects to the backend via this variable. All WebSocket connections are derived from this base URL.
+
+---
+
 ## Reasoning Traces
 
 Every agent decision is logged to `reasoning_trace.jsonl` and printed to the console with colour coding:
