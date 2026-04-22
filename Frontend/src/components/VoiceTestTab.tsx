@@ -10,7 +10,9 @@ interface Props {
 
 // Get WebSocket URL from environment variable or derive from API base URL
 const API_BASE = import.meta.env.VITE_API_BASE_URL || 'https://ai-voice-agent-8ea2.onrender.com';
-const WS_BASE = API_BASE.replace(/^https?/, 'ws');
+const WS_BASE = API_BASE.startsWith('https://')
+  ? API_BASE.replace(/^https:\/\//, 'wss://')
+  : API_BASE.replace(/^http:\/\//, 'ws://');
 
 const LANG_FLAGS: Record<string, string> = { en: '🇬🇧', hi: '🇮🇳', ta: '🇮🇳' };
 const LANG_NAMES: Record<string, string> = { en: 'English', hi: 'Hindi', ta: 'Tamil' };
